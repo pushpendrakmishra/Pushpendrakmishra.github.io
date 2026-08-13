@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Pushpendra Kishore Mishra | Corporate Real Estate &amp; Governance Leader</title>
+<meta name="description" content="Dr. Pushpendra Kishore Mishra — Certified Independent Director, Corporate Real Estate & Infrastructure Leader, 23+ years in banking sector strategy, governance and compliance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101826;
+    --ink-soft:#1c2637;
+    --paper:#F6F3EC;
+    --paper-2:#EFEAE0;
+    --brass:#AD8A4E;
+    --brass-bright:#C9A45F;
+    --slate:#5A6472;
+    --line:rgba(16,24,38,0.14);
+    --line-on-dark:rgba(246,243,236,0.16);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .display{font-family:'Fraunces', serif;}
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
+
+  a{color:inherit;}
+
+  /* ---------- Blueprint grid backdrop ---------- */
+  .blueprint{
+    position:relative;
+  }
+  .blueprint::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:48px 48px;
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .blueprint-dark::before{
+    background-image:
+      linear-gradient(var(--line-on-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-on-dark) 1px, transparent 1px);
+  }
+
+  /* corner ticks - drafting mark */
+  .tick{
+    position:absolute; width:18px; height:18px; pointer-events:none;
+  }
+  .tick::before, .tick::after{content:""; position:absolute; background:var(--brass);}
+  .tick.tl{top:24px; left:24px;}
+  .tick.tr{top:24px; right:24px;}
+  .tick.bl{bottom:24px; left:24px;}
+  .tick.br{bottom:24px; right:24px;}
+  .tick::before{width:100%; height:2px; top:0; left:0;}
+  .tick::after{width:2px; height:100%; top:0; left:0;}
+  .tick.tr::before{left:auto; right:0;}
+  .tick.tr::after{left:auto; right:0;}
+  .tick.bl::before{top:auto; bottom:0;}
+  .tick.bl::after{top:auto; bottom:0;}
+  .tick.br::before{top:auto; bottom:0; left:auto; right:0;}
+  .tick.br::after{top:auto; bottom:0; left:auto; right:0;}
+
+  section{position:relative; padding:96px 8vw;}
+  .wrap{max-width:1120px; margin:0 auto; position:relative;}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 8vw;
+    background:rgba(246,243,236,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-mark{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; letter-spacing:0.02em;}
+  .nav-mark span{color:var(--brass);}
+  .nav-links{display:flex; gap:32px; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase;}
+  .nav-links a{text-decoration:none; opacity:0.75; transition:opacity 0.2s;}
+  .nav-links a:hover{opacity:1; color:var(--brass);}
+  .nav-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--ink);
+    color:var(--paper);
+    min-height:100vh;
+    display:flex; align-items:center;
+    padding-top:120px;
+  }
+  .hero .wrap{width:100%;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--brass-bright); margin-bottom:28px;
+  }
+  .eyebrow::before{content:""; width:28px; height:1px; background:var(--brass-bright);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 5.2rem);
+    font-weight:600;
+    line-height:1.03;
+    letter-spacing:-0.01em;
+    max-width:14ch;
+  }
+  .hero h1 em{font-style:italic; font-weight:400; color:var(--brass-bright);}
+  .hero .role{
+    margin-top:28px;
+    font-size:clamp(1rem, 1.6vw, 1.25rem);
+    color:rgba(246,243,236,0.72);
+    max-width:46ch;
+    line-height:1.55;
+  }
+  .hero .role strong{color:var(--paper); font-weight:500;}
+  .hero-cta{margin-top:44px; display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 26px;
+    font-size:0.85rem; letter-spacing:0.04em; text-transform:uppercase;
+    text-decoration:none;
+    border:1px solid var(--brass-bright);
+    transition:all 0.25s;
+  }
+  .btn-primary{background:var(--brass-bright); color:var(--ink); font-weight:600;}
+  .btn-primary:hover{background:transparent; color:var(--brass-bright);}
+  .btn-ghost{color:var(--paper); border-color:var(--line-on-dark);}
+  .btn-ghost:hover{border-color:var(--brass-bright); color:var(--brass-bright);}
+
+  .hero-figures{
+    margin-top:72px;
+    display:grid; grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line-on-dark);
+    padding-top:28px;
+  }
+  .figure{padding-right:20px;}
+  .figure .num{font-family:'IBM Plex Mono', monospace; font-size:clamp(1.4rem,2.4vw,2rem); color:var(--brass-bright);}
+  .figure .label{font-size:0.74rem; color:rgba(246,243,236,0.6); margin-top:6px; line-height:1.4;}
+
+  /* ---------- Section heading pattern ---------- */
+  .sec-head{display:flex; align-items:baseline; gap:18px; margin-bottom:56px;}
+  .sec-num{font-family:'IBM Plex Mono', monospace; color:var(--brass); font-size:0.85rem;}
+  .sec-title{font-family:'Fraunces', serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:600;}
+  .sec-rule{flex:1; height:1px; background:var(--line); margin-left:8px;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+  .about-lede{font-family:'Fraunces', serif; font-size:1.5rem; line-height:1.5; font-weight:500; color:var(--ink);}
+  .about-lede em{color:var(--brass); font-style:italic;}
+  .about-body p{margin-bottom:20px; line-height:1.75; color:var(--slate); font-size:0.98rem;}
+  .about-body p strong{color:var(--ink);}
+
+  /* ---------- Timeline ---------- */
+  .timeline{border-top:1px solid var(--line);}
+  .tl-item{
+    display:grid; grid-template-columns:140px 1fr 2.3fr;
+    gap:32px;
+    padding:32px 0;
+    border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .tl-item.current{background:var(--paper-2);}
+  .tl-date{font-family:'IBM Plex Mono', monospace; font-size:0.82rem; color:var(--brass); padding-top:4px;}
+  .tl-org h3{font-family:'Fraunces', serif; font-size:1.15rem; font-weight:600;}
+  .tl-org .tl-title{font-size:0.85rem; color:var(--slate); margin-top:6px; line-height:1.5;}
+  .tl-desc{font-size:0.92rem; color:var(--slate); line-height:1.7;}
+  .tl-desc ul{padding-left:18px; margin-top:6px;}
+  .tl-desc li{margin-bottom:4px;}
+
+  /* ---------- Expertise ---------- */
+  .exp-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .exp-cell{background:var(--paper); padding:32px 28px;}
+  .exp-cell .tag{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em;}
+  .exp-cell h4{font-family:'Fraunces', serif; font-size:1.15rem; margin-top:12px; font-weight:600;}
+  .exp-cell p{font-size:0.86rem; color:var(--slate); margin-top:10px; line-height:1.6;}
+
+  /* ---------- Credentials ---------- */
+  .cred-dark{background:var(--ink); color:var(--paper);}
+  .cred-dark .sec-title{color:var(--paper);}
+  .cred-dark .sec-rule{background:var(--line-on-dark);}
+  .cred-list{display:grid; grid-template-columns:1fr 1fr; gap:24px 48px;}
+  .cred-item{border-left:2px solid var(--brass); padding-left:20px;}
+  .cred-item h4{font-family:'Fraunces', serif; font-size:1.05rem; font-weight:600;}
+  .cred-item p{font-size:0.85rem; color:rgba(246,243,236,0.6); margin-top:6px; line-height:1.5;}
+
+  .edu-list{margin-top:56px; border-top:1px solid var(--line-on-dark); padding-top:40px;}
+  .edu-item{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:16px 0;}
+  .edu-item .yr{font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--brass-bright);}
+  .edu-item h4{font-size:0.98rem; font-weight:600;}
+  .edu-item p{font-size:0.84rem; color:rgba(246,243,236,0.6); margin-top:4px;}
+
+  /* ---------- Achievements ledger ---------- */
+  .ledger{border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .ledger-row{
+    display:grid; grid-template-columns:auto 1fr auto;
+    align-items:center; gap:24px;
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .ledger-row:last-child{border-bottom:none;}
+  .ledger-idx{font-family:'IBM Plex Mono', monospace; color:var(--brass); font-size:0.85rem;}
+  .ledger-desc{font-size:0.95rem; color:var(--ink); line-height:1.5;}
+  .ledger-val{font-family:'IBM Plex Mono', monospace; font-size:1.3rem; color:var(--brass); text-align:right; white-space:nowrap;}
+
+  /* ---------- Insights ---------- */
+  .insight-note{
+    border:1px dashed var(--line);
+    padding:32px;
+    font-size:0.92rem;
+    color:var(--slate);
+    line-height:1.7;
+  }
+  .insight-note strong{color:var(--ink);}
+
+  /* ---------- Articles ---------- */
+  .article-list{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line);}
+  .article{background:var(--paper);}
+  .article summary{
+    list-style:none; cursor:pointer;
+    padding:28px 32px;
+    display:grid; grid-template-columns:100px 1fr auto;
+    align-items:center; gap:24px;
+  }
+  .article summary::-webkit-details-marker{display:none;}
+  .article .a-date{font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--brass);}
+  .article .a-title{font-family:'Fraunces', serif; font-size:1.2rem; font-weight:600;}
+  .article .a-excerpt{font-size:0.85rem; color:var(--slate); margin-top:6px; font-family:'Inter',sans-serif; font-weight:400;}
+  .article .a-toggle{
+    width:32px; height:32px; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; color:var(--brass);
+    transition:transform 0.25s;
+  }
+  .article[open] .a-toggle{transform:rotate(45deg);}
+  .article-body{
+    padding:0 32px 36px 32px;
+    max-width:70ch;
+  }
+  .article-body p{font-size:0.94rem; color:var(--slate); line-height:1.75; margin-bottom:16px;}
+  .article-body p strong{color:var(--ink);}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--ink); color:var(--paper); text-align:left;}
+  .contact .sec-title{color:var(--paper);}
+  .contact-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:64px; align-items:end;}
+  .contact-lede{font-family:'Fraunces', serif; font-size:clamp(1.8rem,3.4vw,2.8rem); line-height:1.3; font-weight:500;}
+  .contact-lede em{color:var(--brass-bright); font-style:italic;}
+  .contact-list{display:flex; flex-direction:column; gap:18px;}
+  .contact-list a{
+    text-decoration:none; display:flex; justify-content:space-between; align-items:center;
+    padding:16px 0; border-bottom:1px solid var(--line-on-dark);
+    font-size:0.95rem;
+  }
+  .contact-list a .arrow{color:var(--brass-bright); transition:transform 0.2s;}
+  .contact-list a:hover .arrow{transform:translateX(6px);}
+
+  footer{
+    background:var(--ink); color:rgba(246,243,236,0.4);
+    padding:24px 8vw; font-size:0.78rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+    border-top:1px solid var(--line-on-dark);
+  }
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .about-grid, .contact-grid{grid-template-columns:1fr; gap:32px;}
+    .hero-figures{grid-template-columns:repeat(2,1fr); row-gap:24px;}
+    .tl-item{grid-template-columns:1fr; gap:8px;}
+    .exp-grid{grid-template-columns:1fr;}
+    .cred-list{grid-template-columns:1fr;}
+    .edu-item{grid-template-columns:1fr; gap:4px;}
+    .ledger-row{grid-template-columns:1fr; text-align:left; gap:6px;}
+    .ledger-val{text-align:left;}
+    section{padding:64px 6vw;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-mark">P.K. <span>MISHRA</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#timeline">Career</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#impact">Impact</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero blueprint blueprint-dark">
+  <span class="tick tl"></span><span class="tick tr"></span>
+  <div class="wrap">
+    <div class="eyebrow">Certified Independent Director &middot; Noida, India</div>
+    <h1 class="display">Building the ground floor of <em>corporate&nbsp;trust.</em></h1>
+    <p class="role">Dr. <strong>Pushpendra Kishore Mishra</strong> has spent 23+ years acquiring, building and governing the physical footprint of one of India's largest banks — 2,300+ branches, and the compliance frameworks that keep them standing.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
+      <a class="btn btn-ghost" href="#timeline">View career record</a>
+    </div>
+    <div class="hero-figures">
+      <div class="figure">
+        <div class="num">23+</div>
+        <div class="label">Years in banking real estate &amp; infrastructure</div>
+      </div>
+      <div class="figure">
+        <div class="num">2,300+</div>
+        <div class="label">Branches &amp; offices acquired, built, operationalised</div>
+      </div>
+      <div class="figure">
+        <div class="num">₹220 Cr</div>
+        <div class="label">Annual savings delivered through rent rationalisation</div>
+      </div>
+      <div class="figure">
+        <div class="num">352 ac.</div>
+        <div class="label">Land parcel acquired, Greater Noida</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="blueprint">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">About</h2><div class="sec-rule"></div></div>
+    <div class="about-grid">
+      <div>
+        <p class="about-lede">A career built on the belief that <em>where</em> a business operates is a governance decision, not just a real estate one.</p>
+      </div>
+      <div class="about-body">
+        <p>Dr. Mishra leads large-scale corporate real estate and infrastructure programmes for the banking sector — directing the full lifecycle from <strong>site selection and acquisition through legal due diligence, layout, contractor management and operational readiness.</strong> His portfolio includes marquee acquisitions such as AXIS House, Noida, and a 352-acre mixed-use land parcel in Greater Noida.</p>
+        <p>As a <strong>Certified Independent Director</strong> (Institute of Corporate Affairs, Ministry of Corporate Affairs, Government of India), he now brings that same operational rigour to boardroom governance — risk, compliance, and process re-engineering viewed through the lens of someone who has actually built and run the assets in question.</p>
+        <p>He is currently pursuing the <strong>Senior Management Programme at IIM Ahmedabad</strong>, building on executive education from Columbia Business School and MIT, and holds a Ph.D. in Management on Mergers &amp; Acquisitions in the Indian Banking Sector.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Career Record</h2><div class="sec-rule"></div></div>
+    <div class="timeline">
+
+      <div class="tl-item current">
+        <div class="tl-date mono">2025 — Present</div>
+        <div class="tl-org">
+          <h3>IIM Ahmedabad</h3>
+          <div class="tl-title">Senior Management Programme</div>
+        </div>
+        <div class="tl-desc">On a career development break to complete this executive programme, following earlier leadership education at Columbia Business School (2016) and MIT Management Executive Education (2017).</div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date mono">Nov 2022 — Mar 2025</div>
+        <div class="tl-org">
+          <h3>Axis Bank Ltd.</h3>
+          <div class="tl-title">Senior VP &amp; Zonal Head — Delivery Services, North</div>
+        </div>
+        <div class="tl-desc">
+          <ul>
+            <li>End-to-end project leadership across North India, from site identification to operational readiness</li>
+            <li>Monetised surplus space across two towers of Axis House, Noida</li>
+            <li>Led infrastructure integration for the Citi Bank merger (LD1/LD2 due diligence)</li>
+            <li>Digitised lease acquisition, renewals and relocations via the Samadhan platform</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date mono">Apr 2017 — Oct 2022</div>
+        <div class="tl-org">
+          <h3>Axis Bank Ltd.</h3>
+          <div class="tl-title">Vice President — Zonal Head, Ahmedabad / Lucknow / Noida</div>
+        </div>
+        <div class="tl-desc">
+          <ul>
+            <li>₹220 Cr annual savings through rent renegotiation and space rationalisation</li>
+            <li>Sustained branch operations through COVID-19; ₹175 Cr saved over remaining lease terms</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date mono">Jun 2015 — Mar 2017</div>
+        <div class="tl-org">
+          <h3>Axis Bank Ltd.</h3>
+          <div class="tl-title">Deputy VP — Zonal Projects, North / Zonal Head, Ahmedabad</div>
+        </div>
+        <div class="tl-desc">
+          <ul>
+            <li>Acquired 352 acres of mixed-use land and a 12.74 lakh sq. ft. building in Noida &amp; Greater Noida</li>
+            <li>Led legal, financial due diligence and municipal approvals</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date mono">Aug 2007 — Jun 2015</div>
+        <div class="tl-org">
+          <h3>Axis Bank Ltd.</h3>
+          <div class="tl-title">Deputy Manager → Assistant Vice President, Zonal Projects, North</div>
+        </div>
+        <div class="tl-desc">
+          <ul>
+            <li>Opened 300 rural unbanked branches across Punjab, Haryana, Rajasthan, Uttarakhand, J&amp;K and Uttar Pradesh</li>
+            <li>Secured government approval for a bank ATM within the Ellora Caves, Maharashtra, with ASI and the Ministry of Law</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date mono">2003 — 2007</div>
+        <div class="tl-org">
+          <h3>Walsons Services / APS University / Softechline Solutions</h3>
+          <div class="tl-title">Valuation, Finance Faculty &amp; Financial Analysis</div>
+        </div>
+        <div class="tl-desc">Property valuation and ERP implementation at Walsons Services; finance faculty at Awadhesh Pratap Singh University mentoring 25+ research projects; financial &amp; feasibility analysis at Softechline Solutions.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise" class="blueprint">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Areas of Expertise</h2><div class="sec-rule"></div></div>
+    <div class="exp-grid">
+      <div class="exp-cell"><div class="tag">Acquisition</div><h4>Property &amp; Land Acquisition</h4><p>Sourcing, due diligence, and negotiation of commercial properties and large land parcels.</p></div>
+      <div class="exp-cell"><div class="tag">Portfolio</div><h4>Multi-Location Portfolio Management</h4><p>Compliance with RBI, municipal and corporate standards across thousands of sites.</p></div>
+      <div class="exp-cell"><div class="tag">Execution</div><h4>Infrastructure Delivery</h4><p>Site selection through MEPF and contractor management to operational readiness.</p></div>
+      <div class="exp-cell"><div class="tag">Finance</div><h4>Cost &amp; Rent Optimisation</h4><p>Annual and interim planning that has driven hundreds of crores in savings.</p></div>
+      <div class="exp-cell"><div class="tag">Governance</div><h4>Risk &amp; Regulatory Compliance</h4><p>Liaison with regulators and government authorities; proactive risk mitigation.</p></div>
+      <div class="exp-cell"><div class="tag">Leadership</div><h4>Process Re-Engineering</h4><p>Standardised procedures and digitisation that remove bottlenecks at scale.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="cred-dark blueprint blueprint-dark">
+  <span class="tick tl"></span><span class="tick tr"></span>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Certifications</h2><div class="sec-rule"></div></div>
+    <div class="cred-list">
+      <div class="cred-item">
+        <h4>Certified Independent Director</h4>
+        <p>Institute of Corporate Affairs (IICA), Ministry of Corporate Affairs, Government of India</p>
+      </div>
+      <div class="cred-item">
+        <h4>Senior Management Programme</h4>
+        <p>Indian Institute of Management, Ahmedabad — currently pursuing</p>
+      </div>
+      <div class="cred-item">
+        <h4>Accelerate Leadership in Action</h4>
+        <p>Columbia Business School — October 2016</p>
+      </div>
+      <div class="cred-item">
+        <h4>Accelerate Leadership in Action (Advanced)</h4>
+        <p>MIT Management Executive Education — January 2017</p>
+      </div>
+    </div>
+
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="yr mono">2006–11</div>
+        <div><h4>Ph.D. in Management</h4><p>Mergers &amp; Acquisitions in Indian Banking Sector — A.P.S. University, Rewa</p></div>
+      </div>
+      <div class="edu-item">
+        <div class="yr mono">2001–03</div>
+        <div><h4>MBA, Finance</h4><p>Govindram Seksaria Institute of Management &amp; Research, Indore</p></div>
+      </div>
+      <div class="edu-item">
+        <div class="yr mono">1998–01</div>
+        <div><h4>B.Com.</h4><p>T.R.S. Excellence College, Rewa</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT LEDGER -->
+<section id="impact" class="blueprint">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Impact, by the Numbers</h2><div class="sec-rule"></div></div>
+    <div class="ledger mono">
+      <div class="ledger-row">
+        <div class="ledger-idx">01</div>
+        <div class="ledger-desc" style="font-family:'Inter',sans-serif;">Branches &amp; offices acquired, developed and operationalised across India</div>
+        <div class="ledger-val">2,300+</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-idx">02</div>
+        <div class="ledger-desc" style="font-family:'Inter',sans-serif;">Annual savings from rent rationalisation, Ahmedabad/Lucknow/Noida zones</div>
+        <div class="ledger-val">₹220 Cr</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-idx">03</div>
+        <div class="ledger-desc" style="font-family:'Inter',sans-serif;">Total lease-term savings secured during COVID-19 continuity response</div>
+        <div class="ledger-val">₹175 Cr</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-idx">04</div>
+        <div class="ledger-desc" style="font-family:'Inter',sans-serif;">Mixed land-use acquisition, Noida &amp; Greater Noida</div>
+        <div class="ledger-val">352 ac.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-idx">05</div>
+        <div class="ledger-desc" style="font-family:'Inter',sans-serif;">Rural unbanked branches opened across six North Indian states</div>
+        <div class="ledger-val">300</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-idx">06</div>
+        <div class="ledger-desc" style="font-family:'Inter',sans-serif;">Rent optimisation savings, single-cycle programme</div>
+        <div class="ledger-val">₹10.5 Cr</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS (placeholder engine for SEO) -->
+<section id="insights" class="blueprint">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Insights</h2><div class="sec-rule"></div></div>
+
+    <div class="article-list">
+
+      <details class="article">
+        <summary>
+          <div class="a-date mono">Aug 2026</div>
+          <div>
+            <div class="a-title">The Real Estate Function Is a Compliance Function</div>
+            <div class="a-excerpt">Why every branch a bank opens is, first, a regulatory decision — and what that means for how the property function should be structured.</div>
+          </div>
+          <div class="a-toggle">+</div>
+        </summary>
+        <div class="article-body">
+          <p>In most organisations, real estate is treated as a facilities problem: find a location, negotiate a lease, fit it out, move in. In banking, that framing misses the point entirely. Every branch, ATM, or back-office site a bank opens carries RBI licensing conditions, municipal approvals, fire and safety certifications, and audit trails that will be tested for the life of that lease. The property function isn't downstream of compliance — it <strong>is</strong> compliance, expressed in square footage.</p>
+          <p>Over two decades of building and running bank real estate portfolios, the pattern is consistent: the branches that cause problems years later are almost never the ones with bad footfall. They're the ones where a shortcut was taken at acquisition — a title that wasn't fully cleared, a municipal no-objection certificate that was "in progress," a lease clause left ambiguous to close the deal faster. Those shortcuts don't disappear. They resurface as audit findings, regulatory notices, or expensive renegotiations, usually at the worst possible time.</p>
+          <p>The fix isn't more paperwork. It's structuring the acquisition process so that legal, financial, and regulatory scrutiny happen <strong>before</strong> a site is committed to, not after — with the same rigour a credit team applies to a loan. Sourcing and negotiation move fast; due diligence should not be the variable that gets compressed to hit a timeline. A property team that understands this builds a bank's physical footprint the way a good credit function builds its loan book: assuming every asset will be scrutinised, because eventually, it will be.</p>
+          <p>For boards and senior leadership, the practical takeaway is this: real estate risk should sit on the same reporting line as operational and regulatory risk, not buried inside a facilities budget. It rarely does — and that gap is where most of the expensive surprises come from.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-date mono">Aug 2026</div>
+          <div>
+            <div class="a-title">What Rent Rationalisation Actually Looks Like at Scale</div>
+            <div class="a-excerpt">Delivering ₹220 Cr in annual savings across a branch network isn't one negotiation — it's a system. Here's how the system works.</div>
+          </div>
+          <div class="a-toggle">+</div>
+        </summary>
+        <div class="article-body">
+          <p>When people hear "rent rationalisation," they picture a tougher negotiation with a landlord. That's part of it, but at the scale of a national branch network — thousands of leases, hundreds of landlords, dozens of jurisdictions — the real savings come from treating the portfolio as a single system rather than thousands of individual deals.</p>
+          <p>The first step is visibility most organisations don't have: a live, comparable view of rent per square foot against local market rates, lease expiry dates, and space utilisation, updated continuously rather than reconstructed manually before each renewal. Without that, every renegotiation starts from a weaker position — you're arguing without knowing whether the current rent is even out of line with the market.</p>
+          <p>The second is sequencing. Leases don't renew on a schedule that's convenient for a renegotiation programme; they renew whenever they renew. Building a rolling calendar of upcoming expiries, sorted by savings potential rather than just chronology, lets a small team focus negotiating effort where it will actually move the number — rather than spreading equal attention across a portfolio where most of the value sits in a fraction of the sites.</p>
+          <p>The third, and most underrated, is space rationalisation: not just paying less for the same space, but questioning whether the space is still the right size and shape for how the branch is actually used. Post-pandemic banking, in particular, opened up real opportunities here — footfall patterns changed permanently in many locations, and portfolios that hadn't been re-measured against that reality were paying for space built for a branch model that no longer existed.</p>
+          <p>None of this is glamorous. It's spreadsheets, site visits, and a lot of unremarkable negotiations. But run as a system rather than a series of one-offs, it's where nine-figure annual savings actually come from.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-date mono">Aug 2026</div>
+          <div>
+            <div class="a-title">Why Boards Need Directors Who Have Built, Not Just Reviewed</div>
+            <div class="a-excerpt">Governance experience and operational experience are usually treated as separate tracks. They shouldn't be.</div>
+          </div>
+          <div class="a-toggle">+</div>
+        </summary>
+        <div class="article-body">
+          <p>Independent director training, quite rightly, focuses on fiduciary duty, risk oversight, and governance frameworks. What it can't fully teach is what a decision actually feels like from the operating side of the table — the pressure to hit a timeline, the temptation to treat a compliance step as a formality, the way a "minor" shortcut in execution compounds into a major problem years later.</p>
+          <p>Having spent a career acquiring land, negotiating leases, and running infrastructure programmes inside a regulated institution, the questions that matter most in a boardroom often aren't the ones on the standard checklist. They're questions like: was this due diligence actually completed, or just documented as complete? Does this cost-saving initiative shift risk somewhere it hasn't been priced? Is this timeline realistic, or is it going to quietly compress the steps that protect the organisation?</p>
+          <p>Those aren't questions a governance framework generates on its own — they come from having been on the other side of similar pressure, and knowing where corners actually get cut when nobody's watching closely. That's the case for boards deliberately including directors with deep operational and functional backgrounds, not only those with financial or legal governance expertise. Oversight is sharper when at least some of the people providing it have direct experience of what's being overseen.</p>
+          <p>This isn't an argument against traditional governance expertise — it's an argument for balance. A board built entirely from career directors and a board built entirely from career operators both have blind spots. The strongest ones combine both, and treat operational depth as a governance asset in its own right, not a secondary qualification.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact blueprint blueprint-dark">
+  <span class="tick bl"></span><span class="tick br"></span>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Contact</h2><div class="sec-rule"></div></div>
+    <div class="contact-grid">
+      <div class="contact-lede">Open to senior leadership and <em>independent director</em> opportunities in corporate real estate, governance and infrastructure.</div>
+      <div class="contact-list">
+        <a href="mailto:pushpmishra@gmail.com">Email <span class="arrow">→</span></a>
+        <a href="tel:+918130444008">+91 8130444008 <span class="arrow">→</span></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© <span id="year"></span> Dr. Pushpendra Kishore Mishra</div>
+  <div>Noida, India</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
